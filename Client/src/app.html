@@ -1,0 +1,37 @@
+<template>
+  <div style="background-color:rgb(63, 152, 204)">
+    <h1 style="color:white">${title}</h1>
+    <form role="form" submit.delegate="Find()">
+      <div class="container">
+        <div class="row">
+          <div>
+            <div id="imaginary_container">
+              <div class="input-group stylish-input-group">
+                <input type="text" class="form-control" name="query" value.bind="query" required placeholder="What company are you interested in?">
+                <span class="input-group-addon">
+                  <button type="submit">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div if.bind="v" class="loader" style="display: block; margin: 0 auto;"></div>
+  <div class="container row-centered">
+    <ur class="row list-unstyled" style="margin:2px;">
+      <li repeat.for="todo of watsonData" class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
+        <div style="background-color:rgb(63, 152, 204); border-radius:10px; border: 1px rgb(0, 115, 160) solid;  height:250px; margin: 2%;">
+          <a style="margin:3px;color:white;" href.bind="todo.url">
+            <p> ${todo.title}</p>
+          </a>
+          <img class="img-pos img-responsive" onerror="this.src='https://geneticliteracyproject.org/wp-content/uploads/2017/11/m5xbsgp3zxjvkztcxo4o.png'"
+            style="border-radius:10px;vertical-align:middle; height:150px" src.bind="todo.main_image_url">
+        </div>
+      </li>
+    </ur>
+  </div>
+</template>
