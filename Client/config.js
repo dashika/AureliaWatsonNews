@@ -37,7 +37,7 @@ System.config({
       "vm-browserify": "npm:vm-browserify@0.0.4"
     },
     "github:tochoromero/aurelia-bootstrap@0.1.20": {
-      "aurelia-pal": "npm:aurelia-pal@1.4.0",
+      "aurelia-pal": "npm:aurelia-pal@1.5.0",
       "aurelia-templating-resources": "npm:aurelia-templating-resources@1.5.4",
       "tether": "npm:tether@1.4.3",
       "velocity-animate": "npm:velocity-animate@1.5.1"
@@ -51,22 +51,22 @@ System.config({
     "npm:aurelia-binding@1.6.0": {
       "aurelia-logging": "npm:aurelia-logging@1.4.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.3",
-      "aurelia-pal": "npm:aurelia-pal@1.4.0",
+      "aurelia-pal": "npm:aurelia-pal@1.5.0",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.2.1"
     },
     "npm:aurelia-dependency-injection@1.3.2": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.3",
-      "aurelia-pal": "npm:aurelia-pal@1.4.0"
+      "aurelia-pal": "npm:aurelia-pal@1.5.0"
     },
     "npm:aurelia-loader@1.0.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.3",
       "aurelia-path": "npm:aurelia-path@1.1.1"
     },
     "npm:aurelia-metadata@1.0.3": {
-      "aurelia-pal": "npm:aurelia-pal@1.4.0"
+      "aurelia-pal": "npm:aurelia-pal@1.5.0"
     },
     "npm:aurelia-task-queue@1.2.1": {
-      "aurelia-pal": "npm:aurelia-pal@1.4.0"
+      "aurelia-pal": "npm:aurelia-pal@1.5.0"
     },
     "npm:aurelia-templating-resources@1.5.4": {
       "aurelia-binding": "npm:aurelia-binding@1.6.0",
@@ -74,7 +74,7 @@ System.config({
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.4.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.3",
-      "aurelia-pal": "npm:aurelia-pal@1.4.0",
+      "aurelia-pal": "npm:aurelia-pal@1.5.0",
       "aurelia-path": "npm:aurelia-path@1.1.1",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.2.1",
       "aurelia-templating": "npm:aurelia-templating@1.7.0"
@@ -85,7 +85,7 @@ System.config({
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.4.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.3",
-      "aurelia-pal": "npm:aurelia-pal@1.4.0",
+      "aurelia-pal": "npm:aurelia-pal@1.5.0",
       "aurelia-path": "npm:aurelia-path@1.1.1",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.2.1"
     },

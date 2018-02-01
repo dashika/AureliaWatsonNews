@@ -32,10 +32,10 @@
             <a style="margin:3px;color:white; max-height:100px" href.bind="todo.url">
               <p> ${todo.title}</p>
             </a>
-          <div class="col-md-8">
-            <img class="img-pos img-responsive" onerror="this.src='https://geneticliteracyproject.org/wp-content/uploads/2017/11/m5xbsgp3zxjvkztcxo4o.png'"
-              style="border-radius:10px;vertical-align:middle;" src.bind="todo.main_image_url">
-          </div>
+            <div class="col-md-8">
+              <img class="img-pos img-responsive" onerror="this.src='https://geneticliteracyproject.org/wp-content/uploads/2017/11/m5xbsgp3zxjvkztcxo4o.png'"
+                style="border-radius:10px;vertical-align:middle;" src.bind="todo.main_image_url">
+            </div>
           </div>
         </div>
       </li>
@@ -45,34 +45,24 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" click.delegate="closeNav()">&times;</a>
     <div class="container">
+      <div class="page-header">
+        <h1>
+          <small class="pull-right">${comments.length}</small> Comments </h1>
+      </div>
       <ur class="row list-unstyled" style="margin:2px;">
-        <li repeat.for="todo of watsonData">
+        <li repeat.for="todo of comments">
           <div class="container">
             <div class="row">
               <div class="col-md-8">
-                <div class="page-header">
-                  <h1>
-                    <small class="pull-right">45 comments</small> Comments </h1>
-                </div>
+
                 <div class="comments-list">
                   <div class="media">
                     <p class="pull-right">
-                      <small>5 days ago</small>
+                      <small>${todo.date}</small>
                     </p>
-                    <a class="media-left" href="#">
                       <img src="http://lorempixel.com/40/40/people/1/">
-                    </a>
                     <div class="media-body">
-
-                      <h4 class="media-heading user_name">Baltej Singh</h4>
-                      Wow! this is really great.
-
-                      <p>
-                        <small>
-                          <a href="">Like</a> -
-                          <a href="">Share</a>
-                        </small>
-                      </p>
+                      <h4 class="media-heading user_name">${todo.body}</h4>
                     </div>
                   </div>
                 </div>
