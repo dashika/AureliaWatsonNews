@@ -1,37 +1,87 @@
 <template>
-  <div style="background-color:rgb(63, 152, 204)">
+  <require from="./styles.css"></require>
+  <div style="background-color:rgb(63, 152, 204); ">
     <h1 style="color:white">${title}</h1>
     <form role="form" submit.delegate="Find()">
       <div class="container">
         <div class="row">
-          <div>
-            <div id="imaginary_container">
-              <div class="input-group stylish-input-group">
-                <input type="text" class="form-control" name="query" value.bind="query" required placeholder="What company are you interested in?">
-                <span class="input-group-addon">
-                  <button type="submit">
-                    <span class="glyphicon glyphicon-search"></span>
-                  </button>
-                </span>
-              </div>
+
+          <div id="imaginary_container">
+            <div class="input-group stylish-input-group">
+              <input type="text" style="z-index:1" class="form-control" name="query" value.bind="query" required placeholder="What company are you interested in?">
+              <span class="input-group-addon">
+                <button type="submit">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
             </div>
+
           </div>
         </div>
       </div>
     </form>
   </div>
   <div if.bind="v" class="loader" style="display: block; margin: 0 auto;"></div>
+
   <div class="container row-centered">
     <ur class="row list-unstyled" style="margin:2px;">
       <li repeat.for="todo of watsonData" class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
-        <div style="background-color:rgb(63, 152, 204); border-radius:10px; border: 1px rgb(0, 115, 160) solid;  height:250px; margin: 2%;">
-          <a style="margin:3px;color:white;" href.bind="todo.url">
-            <p> ${todo.title}</p>
-          </a>
-          <img class="img-pos img-responsive" onerror="this.src='https://geneticliteracyproject.org/wp-content/uploads/2017/11/m5xbsgp3zxjvkztcxo4o.png'"
-            style="border-radius:10px;vertical-align:middle; height:150px" src.bind="todo.main_image_url">
+        <div class="container">
+          <div class="text-center" style="background-color:rgb(63, 152, 204); border-radius:10px; border: 1px rgb(0, 115, 160) solid; margin: 2%; height:250px"
+            click.delegate="openNav(todo.id)">
+            <a style="margin:3px;color:white; max-height:100px" href.bind="todo.url">
+              <p> ${todo.title}</p>
+            </a>
+          <div class="col-md-8">
+            <img class="img-pos img-responsive" onerror="this.src='https://geneticliteracyproject.org/wp-content/uploads/2017/11/m5xbsgp3zxjvkztcxo4o.png'"
+              style="border-radius:10px;vertical-align:middle;" src.bind="todo.main_image_url">
+          </div>
+          </div>
         </div>
       </li>
     </ur>
   </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" click.delegate="closeNav()">&times;</a>
+    <div class="container">
+      <ur class="row list-unstyled" style="margin:2px;">
+        <li repeat.for="todo of watsonData">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="page-header">
+                  <h1>
+                    <small class="pull-right">45 comments</small> Comments </h1>
+                </div>
+                <div class="comments-list">
+                  <div class="media">
+                    <p class="pull-right">
+                      <small>5 days ago</small>
+                    </p>
+                    <a class="media-left" href="#">
+                      <img src="http://lorempixel.com/40/40/people/1/">
+                    </a>
+                    <div class="media-body">
+
+                      <h4 class="media-heading user_name">Baltej Singh</h4>
+                      Wow! this is really great.
+
+                      <p>
+                        <small>
+                          <a href="">Like</a> -
+                          <a href="">Share</a>
+                        </small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ur>
+    </div>
+  </div>
+
 </template>

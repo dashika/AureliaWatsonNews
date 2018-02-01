@@ -91,7 +91,13 @@
             "resources": [
               "**/*.html"
             ]
-          }
+          },
+          {
+            "name": "aurelia-configuration",
+            "path": "../node_modules/aurelia-configuration/dist/commonjs",
+            "main": "index"
+          },
+          "deep-extend"
         ]
       }
     ],

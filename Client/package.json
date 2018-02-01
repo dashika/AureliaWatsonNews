@@ -6,16 +6,24 @@
     "type": "???",
     "url": "???"
   },
+  "keywords": [
+    "aurelia",
+    "firebase",
+    "plugin"
+  ],
   "license": "MIT",
   "dependencies": {
     "aurelia-animator-css": "^1.0.2",
     "aurelia-bootstrap": "^0.1.20",
     "aurelia-bootstrapper": "^2.1.1",
+    "aurelia-framework": "1.1.5",
     "bluebird": "^3.4.1",
     "requirejs": "^2.3.2",
+    "startbootstrap-simple-sidebar": "^4.0.0",
     "tether": "^1.4.3",
     "text": "github:requirejs/text#latest",
-    "velocity-animate": "^1.5.1"
+    "velocity-animate": "^1.5.1",
+    "firebase": "^4.9.0"
   },
   "peerDependencies": {},
   "devDependencies": {
@@ -29,6 +37,7 @@
     "connect-history-api-fallback": "^1.2.0",
     "debounce": "^1.0.2",
     "event-stream": "^3.3.3",
+    "firebase": "^4.9.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-changed-in-place": "^2.0.3",
     "gulp-htmlmin": "^3.0.0",

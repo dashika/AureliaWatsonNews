@@ -1,7 +1,6 @@
 import { WatsonDataProxy, WatsonData } from './WatsonData';
 import { HttpClient, json } from 'aurelia-fetch-client';
-import { WatsonData } from './WatsonData.d';
-import { default } from './environment';
+declare var firebase;
 
 export class App {
 
@@ -15,11 +14,21 @@ export class App {
     this.v = false;
   }
 
+   openNav(value) {
+    document.getElementById("mySidenav").style.width = "50%";
+    firebase.database().ref('comments').set({
+      watsonId: value,
+      message: "msg" + value
+    });
+    };
+
+ closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+ };
+  
   Find() {
     this.v = true;
-    console.log('myUser');
     let httpClient = new HttpClient();
-
 
     httpClient.configure(config => {
       config
@@ -34,12 +43,12 @@ export class App {
         .withInterceptor({
           request(request) {
             console.log(`Requesting ${request.method} ${request.url}`);
-            return request; // you can return a modified Request, or you can short-circuit the request by returning a Response
+            return request; 
           },
           response(response) {
             console.log(`Received ${response.status} ${response.url}`);
             console.log(response);
-            return response; // you can return a modified Response
+            return response; 
           }
         });
     });
@@ -51,7 +60,6 @@ export class App {
       body: json(comment)
     })
       .then(response => {
-        console.log(response);
         return response.json()
       })
       .then(data => {
@@ -72,4 +80,5 @@ export class App {
         return [];
       });
   };
+
 }
