@@ -5,7 +5,9 @@ Server - Node.js Express, client - Aurelia by TypeScript.
 ---
 ## DEMO
 
-![](https://github.com/dashika/AureliaWatsonNews/blob/master/Screen%20Shot%202018-01-24%20at%204.03.45%20PM.png)
+Main|Comment
+-------------|----------------- 
+![](https://github.com/dashika/AureliaWatsonNews/blob/master/Screen%20Shot%202018-01-24%20at%204.03.45%20PM.png) | ![](https://github.com/dashika/AureliaWatsonNews/blob/master/Screen%20Shot%202018-02-02%20at%202.31.53%20PM.png)
 ---
 
 ## Get Started
