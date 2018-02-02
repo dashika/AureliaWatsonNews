@@ -18,12 +18,13 @@
     "aurelia-bootstrapper": "^2.1.1",
     "aurelia-framework": "1.1.5",
     "bluebird": "^3.4.1",
+    "firebase": "^4.9.0",
+    "moment": "^2.20.1",
     "requirejs": "^2.3.2",
     "startbootstrap-simple-sidebar": "^4.0.0",
     "tether": "^1.4.3",
     "text": "github:requirejs/text#latest",
-    "velocity-animate": "^1.5.1",
-    "firebase": "^4.9.0"
+    "velocity-animate": "^1.5.1"
   },
   "peerDependencies": {},
   "devDependencies": {

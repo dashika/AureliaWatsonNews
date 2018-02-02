@@ -1,7 +1,7 @@
 <template>
   <require from="./styles.css"></require>
   <div style="background-color:rgb(63, 152, 204); ">
-    <h1 style="color:white">${title}</h1>
+    <h1 style="color:aliceblue">${title}</h1>
     <form role="form" submit.delegate="Find()">
       <div class="container">
         <div class="row">
@@ -27,43 +27,60 @@
     <ur class="row list-unstyled" style="margin:2px;">
       <li repeat.for="todo of watsonData" class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
         <div class="container">
-          <div class="text-center" style="background-color:rgb(63, 152, 204); border-radius:10px; border: 1px rgb(0, 115, 160) solid; margin: 2%; height:250px"
+          <div class="text-center" style="background-color:rgb(63, 152, 204); border-radius:10px; border: 1px rgb(0, 115, 160) solid; margin: 2%; height:300px; "
             click.delegate="openNav(todo.id)">
-            <a style="margin:3px;color:white; max-height:100px" href.bind="todo.url">
+            <a style="margin:3px;color:aliceblue; max-height:20%" href.bind="todo.url">
               <p> ${todo.title}</p>
             </a>
-            <div class="col-md-8">
-              <img class="img-pos img-responsive" onerror="this.src='https://geneticliteracyproject.org/wp-content/uploads/2017/11/m5xbsgp3zxjvkztcxo4o.png'"
-                style="border-radius:10px;vertical-align:middle;" src.bind="todo.main_image_url">
-            </div>
+            <img onerror="this.src='https://geneticliteracyproject.org/wp-content/uploads/2017/11/m5xbsgp3zxjvkztcxo4o.png'"
+              style="border-radius:10%;object-fit:scale-down;width:80%;max-height:80%; padding:4%" align="middle" src.bind="todo.main_image_url">
+            
           </div>
+        
         </div>
       </li>
     </ur>
   </div>
 
   <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" click.delegate="closeNav()">&times;</a>
+    <a href="javascript:void(0)" style="height:5%" class="closebtn" click.delegate="closeNav()">&times;</a>
     <div class="container">
-      <div class="page-header">
-        <h1>
-          <small class="pull-right">${comments.length}</small> Comments </h1>
+
+      <div class="container">
+        <div class="text-center" style="background-color:rgb(226, 232, 236); border-radius:10px; border: 1px rgb(0, 115, 160) solid; margin: 2%; ">
+          <div class="comments-list">
+            <div class="media" style="margin:1%">
+              <p class="pull-right">
+                <small></small>
+              </p>
+              <img style="border-radius:10px;max-height:50px; margin: 1%;" class="img-pos img-responsive" onerror="this.src='http://beormundschool.co.uk/img/ChildIcon.png'"
+                src="http://beormundschool.co.uk/img/ChildIcon.png">
+              <div class="media-body">
+                <input type="text" class="media-heading user_name" placeholder="Your comment" name="newComment" value.bind="newComment">
+                <button type="submit" click.delegate="SendComment()"> Send </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <ur class="row list-unstyled" style="margin:2px;">
+
+      <h3 style="color:aliceblue">
+        <small style="color:aliceblue" class="pull-right">${comments.length}</small> Comments </h3>
+      <hr>
+
+      <ur class="row list-unstyled">
         <li repeat.for="todo of comments">
           <div class="container">
-            <div class="row">
-              <div class="col-md-8">
-
-                <div class="comments-list">
-                  <div class="media">
-                    <p class="pull-right">
-                      <small>${todo.date}</small>
-                    </p>
-                      <img src="http://lorempixel.com/40/40/people/1/">
-                    <div class="media-body">
-                      <h4 class="media-heading user_name">${todo.body}</h4>
-                    </div>
+            <div class="text-center" style="background-color:rgb(226, 232, 236); border-radius:10px; border: 1px rgb(0, 115, 160) solid; margin: 2%; ">
+              <div class="comments-list">
+                <div class="media" style="margin:1%">
+                  <p class="pull-right"></p>
+                  <small>${todo.date}</small>
+                  </p>
+                  <img style="border-radius:10px; margin: 1%;max-height:50px" class="img-pos img-responsive" onerror="this.src='http://beormundschool.co.uk/img/ChildIcon.png'"
+                    src="http://beormundschool.co.uk/img/ChildIcon.png">
+                  <div class="media-body">
+                    <h4 class="media-heading user_name">${todo.body}</h4>
                   </div>
                 </div>
               </div>

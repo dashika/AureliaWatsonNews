@@ -6,6 +6,30 @@
   text-align: center;
 }
 
+a {
+  color:aliceblue;
+}
+
+.fill {
+  object-fit: fill;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.none {
+  object-fit: none;
+}
+
+.scale-down {
+  object-fit: scale-down;
+}
+
 /* loader */
 
 .loader {
@@ -76,7 +100,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #C0C0C0;
+  background-color: #3498db;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -86,13 +110,13 @@
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #383838;
+  color: #e7e7e7;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #929292;
+  color: #c5c5b1;
 }
 
 .sidenav .closebtn {

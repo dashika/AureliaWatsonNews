@@ -4,6 +4,7 @@ export class CommentProxy {
   public readonly body: string;
   public readonly date: string;
   public readonly uid: string;
+  public readonly key:string;
   public static Parse(d: string): CommentProxy {
     return CommentProxy.Create(JSON.parse(d));
   }

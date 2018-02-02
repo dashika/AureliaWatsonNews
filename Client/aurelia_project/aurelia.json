@@ -97,7 +97,8 @@
             "path": "../node_modules/aurelia-configuration/dist/commonjs",
             "main": "index"
           },
-          "deep-extend"
+          "deep-extend",
+          { "name": "moment", "path": "../node_modules/moment", "main": "moment" }
         ]
       }
     ],
